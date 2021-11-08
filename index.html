@@ -7,71 +7,90 @@
     <link href="/fontawesome/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&family=Russo+One:wght@300;400;500;700;900&family=Work+Sans:wght@300;400;500;700;900&family=Bree+Serif&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&family=Russo+One:wght@300;400;500;700;900&family=Work+Sans:wght@300;400;500;700;900&family=Bree+Serif&family=Zen+Antique+Soft&family=Source+Sans+Pro&family=Open+Sans+Condensed&family=Teko&family=Mitr&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <title>Resume</title>
     <style>
         body {
-            font-family: 'Noto Sans', sans-serif;
+            /* font-family: 'Noto Sans', sans-serif; */
+            font-family: 'Source Sans Pro', sans-serif;
             color:#565961;
             font-size: 12px;
+            /* line-height: 16px; */
 
         }
         .canvas-container {
             margin: 0 auto; /* for centering, feel free to use flexbox or some other method*/
             box-sizing: border-box;
-            padding: 0.5in; /* controls margins */
+            padding: 0.45in; /* controls margins */
             width: 8.5in;
             height: 11in;
             background-color: white;
             /* box-shadow can be removed for printing */
-            box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+            /* box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7); */
         }
         .name {
             /* font-family: 'Tenor Sans', sans-serif; */
             font-family: 'Bree Serif', serif;
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 900;
             color:#0080FF
 
         }
         .title {
             font-family: 'Zen Kaku Gothic Antique', sans-serif;
-            font-size: 24px;
+            font-size: 20px;
+            margin-bottom: 5px;
 
         }
 
         .contacts {
 
         }
+        .contacts span {
+            margin-right: 10px;
+        }
         .contacts span span {
             font-family: 'Work Sans', sans-serif;
             font-size: 12px;
 
         }
+        .contacts i {
+            margin-right: 3px;
+            color:#0080FF
+        }
         main {
             display: flex;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         section:nth-of-type(1) {
-            flex: 80%;
+            flex: 75%;
         }
         section:nth-of-type(2) {
-            flex: 20%;
-            margin-left: 20px;
+            flex: 25%;
+            /* margin-left: 15px; */
         }
         .experience-title, .skills-title, .projects-title {
             font-family: 'Zen Antique Soft', serif;
             font-size: 16px;
             font-weight: 900;
             color:#0080FF;
-            margin-bottom: 15px;          
+            margin-bottom: 2px;     
+                 
+        }
+        .job-information, .project-information {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 15px;
         }
         .job-title span, .project-title {
             /* font-family: 'Zen Antique Soft', serif; */
             /* font-family: 'Tenor Sans', sans-serif; */
-            font-family: 'Work Sans', sans-serif;
+            /* font-family: 'Work Sans', sans-serif; */
+            /* font-family: 'Mitr', sans-serif; */
+            font-family: 'Sarala', sans-serif;
+            
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             /* margin-bottom: 15px;               */
 
         }
@@ -88,18 +107,53 @@
             font-family: 'Tenor Sans', sans-serif;
 
             font-size: 12px;
+            padding-top: 3px;
             /* font-weight: 300; */
             /* color:#001f3d; */
             /* margin-bottom: 15px;               */
         }
         .project-title {
             color:#001f3d;
-            margin-bottom: 5px;
+            /* margin-bottom: 5px; */
         }
         .project-description {
             margin-bottom: 15px;
         }
+        .skill-title {
+            /* font-family: 'Work Sans', sans-serif; */
+            font-family: 'Sarala', sans-serif;
 
+            font-size: 14px;
+            font-weight: 600;
+            color:#001f3d;
+            margin-bottom: 5px;
+
+        }
+        .skill-list {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 5px 0px;
+
+        }
+        li {
+            margin-bottom: 3px;
+        }
+        li::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-size: 12px;
+            margin-right: 5px;
+            /* font-weight: 900;  */
+            content: "\f192";
+            color:#0080FF;
+        } 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
     </style>
 </head>
@@ -110,22 +164,30 @@
         <div class="title">Software Engineer</div>
         <div class="contacts">
             <span class="email">
-                <i class="fas fa-envelope"></i>
-                <span>akeeminbox@gmail.com</span>
+                <a href="mailto:akeeminbox@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>akeeminbox@gmail.com</span>
+                </a>
             </span>
             <span class="number">
-                <i class="fas fa-phone-alt"></i>
-                <span>470-503-9485</span>
+                <a href="tel:+470-503-9485">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>470-503-9485</span>
+                </a>
             </span>
 
             <span class="site">
-                <i class="fas fa-link"></i>
-                <span>keemcodes.com</span>
+                <a href="http://keemcodes.com">
+                    <i class="fas fa-link"></i>
+                    <span>keemcodes.com</span>
+                </a>
             </span>
 
             <span class="github">
-                <i class="fab fa-github-alt"></i>
-                <span>github.com/keemcodes</span>
+                <a href="http://github.com/keemcodes">
+                    <i class="fab fa-github-alt"></i>
+                    <span>github.com/keemcodes</span>
+                </a>
             </span>
         </div>
         </header>
@@ -135,77 +197,72 @@
                     <div class="experience-title">
                         Experience
                     </div>
-                    <div class="first-job">                        
-                        <div class="job-title">
-                            <span>Software Engineer</span> <span>@ City of Atlanta</span>
-                        </div>
-                        <div class="job-dates">
-                            January 2020 - Present
-                        </div>
+                    <div class="first-job">    
+                        <div class="job-information">
+                            <div class="job-title">
+                                <span>Software Engineer</span> <span>@ City of Atlanta</span>
+                            </div>
+                            <div class="job-dates">
+                                January 2020 - Present
+                            </div>
+                        </div>                    
                         <div class="job-tasks">
                             <ul>
+                                <li>Develop and maintain code for variety of large scale, high utilization web applications</li>
+                                <li>Write and support code for various enterprise level projects using an assortment of languages </li>
+                                <li>Integrate existing systems and applications with internal data sources such as Microsoft Active Directory, Oracle Database, SQL Server and various APIs</li>
+                                <li>Migrate legacy code bases and systems to modern languages, frameworks and systems</li>
+                                <li>Architect and deploy cloud-based web infrastructure utilizing various server operating systems such as Windows and Linux.</li>
+                                <li>Work on project / team based application design and integration efforts across a variety of systems.</li>
+                            </ul>
+                            <!-- <ul>
                                 <li>Design, develop and maintain code for variety of large scale, high utilization web applications</li>
                                 <li>Develop code for various projects using an assortment of languages and frameworks including PHP, Node.JS, Javascript, jQuery, React and more.</li>
                                 <li>Migrate legacy code bases and systems to modern languages, frameworks and systems</li>
                                 <li>Work on project / team based application design and integration efforts across a variety of systems.</li>
                                 <li>Integrate existing systems and applications with internal data sources such as Microsoft Active Directory, Oracle Database, SQL Server and various APIs</li>
                                 <li>Architect and deploy cloud-based web infrastructure utilizing various server operating systems such as Windows and Linux.</li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <div class="second-job">
-                        <div class="job-title">
-                            <span>Software Engineer</span> <span>@ City of Atlanta</span>
+                        <div class="job-information">
+                            <div class="job-title">
+                                <span>Co-founder & Head of Development</span> <span>@ Nu Life Technologies</span>
+                            </div>
+                            <div class="job-dates">
+                                July 2016 - Present
+                            </div>                        
                         </div>
-                        <div class="job-dates">
-                            January 2020 - Present
-                        </div>                        
                         <div class="job-tasks">
                             <ul>
-                                <li>Manage and lead a team of agile developers in various development projects related to game server scripting, web / mobile application development and more.</li>
+                                <li>Write modular, component-structured code to produce secure, robust, and architecture-neutral products..</li>
+                                <li>Design and deploy multi-layer integrated & distributed infrastructure for web environments.</li>
+                                <li>Engage enterprise level clients, help improve employee efficiency by introducing task and project management software</li>
+                                <!-- <li>Architect game and web server infrastructure</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="third-job">
+                        <div class="job-information">
+                            <div class="job-title">
+                                <span>Director of Development</span> <span>@ Next Generation Gaming</span>
+                            </div>
+                            <div class="job-dates">
+                                June 2015 - October 2016
+                            </div>                        
+                        </div>
+                        <div class="job-tasks">
+                            <ul>
+                                <li>Direct and manage a team of agile developers in various development projects related to game server scripting, web / mobile application development and more.</li>
                                 <li>Manage a variety of game server development projects, expanding our private server network across multiple popular server-based games focused around the popular Grand Theft Auto series.</li>
-                                <li>Writing robust and scalable game server code</li>
-                                <li>Architect game and web server infrastructure</li>
-                                <li></li>
+                                <li>Authored a highly downloaded and utilized health-hack detection system known as SprunkGuard Detection to combat against widespread use within San Andreas Multiplayer</li>
+                                <li>Manage game server and web infrastructure for largest North American SA:MP server averaging 10,000+ monthly active users</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="projects">
-                    <div class="projects-title">
-                        Projects
-                    </div>
-                    <div class="first-project">
-                        <div class="project-title">Employee Initiatives Application</div>
-                        <div class="project-description">
-                            Application allows employees to submit their weekly initiatives (tasks) and request colleague support (resources) to help with specific tasks. Application integrates with Microsoft Active Directory to allow Single Sign On, (SSO) auto authenticating functionality for users. Developing this application in-house saved our department an estimated $500,000-$1,000,000 in vendor licensing, procurement, legal fees and resource allocation.
-                        </div>
-                    </div>
-                    <div class="second-project">
-                        <div class="project-title">
-                            Security Wait Times (SWT) Application
-                        </div>
-                        <div class="project-description">
-                            Project based task to integrate proprietary API, allowing consumption of motion sensor supplied data for customer wait time calculation. Application features include web page integration for public view, web admin panel for manual input and closing / opening of different checkpoints, and email notifications of API status. 
-                        </div>
-                    </div>
-                    <div class="third-project">
-                        <div class="project-title">
-                            ASP.NET to PHP Code Migration
-                        </div>
-                        <div class="project-description">
-                            Internal project effort to migrate legacy ASP.NET web application code to modern PHP / Javascript web applications. All features of the ASP.NET application was rebuilt in a modern, robust, MVC design following Object Oriented principles. The newly designed application introduces modularity and single responsibility functions. Some of these migrated features include Flight Information, Ground Transportation Management, Parking Management Portals and more.
-                        </div>
-                    </div>
-                    <div class="third-project">
-                        <div class="project-title">
-                            Press Releases API Integration
-                        </div>
-                        <div class="project-description">
-                            Integrate proprietary API with existing web application to provide Press Releases to media, customers and other invested users. Integration effort was previously halted for 3 years due to an internal misinterpretation of infrastructural limitations within our web environment. Created a custom feature to allow integration between the API and our web environment, resuming and completing a previously halted project task.
-                        </div>
-                    </div>
-                </div>                
+           
             </section>
             <section>
                 <div class="skills">
@@ -240,6 +297,76 @@
                 </div>
             </section>
         </main>
+        <div class="bottom">
+            <div class="projects">
+                <div class="projects-title">
+                    Projects
+                </div>
+                <div class="first-project">
+                    <div class="project-information">
+                        <div class="project-title">Employee Initiatives Application</div>
+                        <div class="project-dates">July 2021 - October 2021</div>
+                    </div>
+                    <div class="project-tasks">
+                        <ul>
+                            <li>Build application supporting over 50,000 internal users in submitting weekly initiatives and request co-worker support.</li>
+                            <li>Worked on UI/UX design, full stack development, database design, deploying to cloud and more.</li>
+                            <li>Integrated application with Microsoft Active Directory to allow Windows Authentication for internal devices.</li>
+                            <li>Saved department an estimated $500k-$800k in vendor supported development costs, including licensing, procurement, legal fees, and resource allocation</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="project-description">
+                        Application allows employees to submit their weekly initiatives (tasks) and request colleague support (resources) to help with specific tasks. Application integrates with Microsoft Active Directory to allow Single Sign On, (SSO) auto authenticating functionality for users. Developing this application in-house saved our department an estimated $500,000-$1,000,000 in vendor licensing, procurement, legal fees and resource allocation.
+                    </div> -->
+                </div>
+                <div class="second-project">
+                    <div class="project-information">                        
+                        <div class="project-title">
+                            Security Wait Times (SWT) Application
+                        </div>
+                        <div class="project-dates">March 2020 - August 2020</div>
+                    </div>
+                    <div class="project-tasks">
+                        <ul>
+                            <li>Build a cloud hosted application that consumes motion sensor data from internally hosted API to provide users with wait times for security checkpoints.</li>
+                            <li>Support project effort by designing architecture diagrams, action flow diagrams and implementation plans, providing system and firewall change justification to change advisory board</li>
+                            <li>Application supports web page view for public, web admin panel for manual input overrides, checkpoint operation status changes and email notification management. </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="project-description">
+                        Project based task to integrate proprietary API, allowing consumption of motion sensor supplied data for customer wait time calculation. Application features include web page integration for public view, web admin panel for manual input and closing / opening of different checkpoints, and email notifications of API status. 
+                    </div> -->
+                </div>
+                <div class="third-project">
+                    <div class="project-information">
+                        <div class="project-title">
+                            ASP.NET to PHP Code Migration
+                        </div>
+                        <div class="project-dates">
+                            February 2020 - October 2021
+                        </div>
+                    </div>
+                    <div class="project-tasks">
+                        <ul>
+                            <li>Spearheaded internal project effort to migrate legacy ASP.NET web application to modern object-oriented PHP and Javascript.</li>
+                            <li>Rebuilt multiple highly integrated systems and features, including Flight Information System, Ground Transportation Management Portal, Parking Management Portal, Flight Tracker and more</li>
+                            <li>Introduce Model View Controller (MVC) design pattern to help improve application modularity and maintain single responsibility design principle.</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="project-description">
+                        Internal project effort to migrate legacy ASP.NET web application code to modern PHP / Javascript web applications. All features of the ASP.NET application was rebuilt in a modern, robust, MVC design following Object Oriented principles. The newly designed application introduces modularity and single responsibility functions. Some of these migrated features include Flight Information, Ground Transportation Management, Parking Management Portals and more.
+                    </div> -->
+                </div>
+                <!-- <div class="fourth-project">
+                    <div class="project-title">
+                        Press Releases API Integration
+                    </div>
+                    <div class="project-description">
+                        Integrate proprietary API with existing web application to provide Press Releases to media, customers and other invested users. Integration effort was previously halted for 3 years due to an internal misinterpretation of infrastructural limitations within our web environment. Created a custom feature to allow integration between the API and our web environment, resuming and completing a previously halted project task.
+                    </div>
+                </div> -->
+            </div>      
+        </div>
     </div>
 </body>
 </html>
